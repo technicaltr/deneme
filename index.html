@@ -1,0 +1,531 @@
+!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Zula Oyun</title>
+<meta name="description" content="Zula, ilk ve tek Türk yapımı MMOFPS oyunu">
+<meta name="google-site-verification" content="dPVLRnGNXTJBl2q50OiAt_aoRayZj67JAY22cMk6Mmc" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no shrink-to-fit=no" />
+<link rel="stylesheet" href="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/css/bootstrap.min.css" />
+<link rel="stylesheet" href="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/css/style.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link rel="stylesheet" href="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/css/owl/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/css/owl/assets/owl.theme.default.min.css" />
+<link rel="icon" href="//cdn.zulaoyun.com/sitecdn/TR/Content/images/favicon-v2.ico" type="image/x-icon" />
+<script src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/js/jquery-3.3.1.min.js"></script>
+<script src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/js/bootstrap-f.min.js"></script>
+<script src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/js/owl/owl.carousel.min.js"></script>
+<script src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/js/jquery.touchSwipe.min.js"></script>
+<script src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/js/jquery.lazy.min.js"></script>
+<script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '973819402646794');
+        fbq('track', "PageView");
+        fbq('track', 'ViewContent');</script>
+<noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=973819402646794&ev=PageView&noscript=1" />
+    </noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-60166227-3"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-60166227-3');
+    </script>
+<link rel="manifest" href="/manifest.json" />
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+        var OneSignal = window.OneSignal || [];
+        OneSignal.push(function () {
+            OneSignal.init({
+                appId: "c198379b-af66-4c6b-942b-a9848231b395",
+                autoRegister: false,
+                notifyButton: {
+                    enable: false,
+                },
+                promptOptions: {
+                    actionMessage: "Zula Oyun Sitesinden Bildirimlerine izin verin.",
+                    acceptButtonText: "İZİN VER",
+                    cancelButtonText: "İZİN VERME"
+                }
+            });
+            if (Notification.permission === "granted") {
+                OneSignal.getUserId()
+                    .then(function (userId) {
+                        if (!userId) {
+                            OneSignal.registerForPushNotifications();
+                        }
+                    })
+            } else {
+                OneSignal.showHttpPrompt();
+            }
+        });
+    </script>
+</head>
+<body>
+<div class="container-fluid p-0">
+<div id="preloader">
+<img src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/zula-logov2.png" />
+</div>
+<div class="container" style="position: sticky; top: 15px; z-index: 9999; ">
+<header class="sticky-top" id="mainHeader">
+<a class="d-block d-md-none btnToggleMenu">
+<i class="fas fa-bars"></i>
+</a>
+<div class="row">
+<div class="col-md-8">
+<a href="/" title="Zula"><img class="logo lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/zula-logov2.png" /></a>
+<ul class="main-menu skew">
+<li>
+<a href="#">BA&#x15E;LA</a>
+<ul class="dropdown-menu skew">
+<li><a href="/kayit-rehberi">Kay&#x131;t Rehberi</a></li>
+<li><a href="/oyuncu-rehberi">Oyuncu Rehberi</a></li>
+<li><a href="/sistem-gereksinimleri">Sistem Gereksinimleri</a></li>
+</ul>
+</li>
+<li>
+<a href="#">HABERLER</a>
+<ul class="dropdown-menu skew">
+<li><a href="/kampanyalar">Kampanyalar</a></li>
+<li><a href="/gelistirmeler">Geli&#x15F;tirme</a></li>
+<li><a href="/etkinlikler">Etkinlikler</a></li>
+</ul>
+</li>
+<li>
+<a href="#">ESPOR</a>
+<ul class="dropdown-menu skew">
+<li><a href="/klan-siralama">Klan S&#x131;ralamas&#x131;</a></li>
+<li><a href="/bireysel-siralama">Bireysel S&#x131;ralama</a></li>
+<li><a href="/rekabet-siralama">Rekabet Modu S&#x131;ralamas&#x131;</a></li>
+</ul>
+</li>
+<li>
+<a href="#">MEDYA</a>
+<ul class="dropdown-menu skew">
+<li><a href="/karakterler">Karakterler</a></li>
+<li><a href="/silahlar">Silahlar</a></li>
+<li><a href="/haritalar">Haritalar</a></li>
+<li><a href="/videolar">Videolar</a></li>
+</ul>
+</li>
+<li>
+<a href="#">DESTEK</a>
+<ul class="dropdown-menu skew">
+<li><a href="/destek">Yard&#x131;m Al&#x131;n</a></li>
+</ul>
+</li>
+<li>
+<a href="#">ALTIN Y&#xDC;KLE</a>
+<ul class="dropdown-menu skew">
+<li><a href="https://hesap.zulaoyun.com/pin/epin">EPIN Y&#xFC;kle</a></li>
+<li><a href="https://hesap.zulaoyun.com/altin-yukle">ZA Y&#xFC;kle</a></li>
+</ul>
+</li>
+<li>
+<a href="#">HESABIM</a>
+<ul class="dropdown-menu skew">
+ <li><a href="https://hesap.zulaoyun.com">Hesap &#x130;&#x15F;lemleri</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="col-md-3 p-0">
+<div class="links skew">
+<a href="https://hesap.zulaoyun.com/kayit/yeni" target="_blank">KAYIT OL <i class="fas fa-sign-in-alt"></i></a>
+<a href="#" id="btnOpenDownloadModal" data-toggle="modal" data-target="#downloadModal">HEMEN İNDİR <i class="fas fa-download"></i></a>
+</div>
+</div>
+<div class="col-md-1 p-0">
+<div class="langs skew">
+<a class="active" title="TR" href="/Home/ChangeLanguage?localeId=2">TR</a>
+<a class="" title="ENG" href="/Home/ChangeLanguage?localeId=1">ENG</a>
+</div>
+</div>
+</div>
+</header>
+</div>
+<section class="main-slider">
+<div id="mainSlider" class="carousel slide" data-ride="carousel">
+
+<ul class="carousel-indicators">
+<li data-target="#mainSlider" data-slide-to="0" class="active"></li>
+<li data-target="#mainSlider" data-slide-to="1" class=""></li>
+<li data-target="#mainSlider" data-slide-to="2" class=""></li>
+<li data-target="#mainSlider" data-slide-to="3" class=""></li>
+</ul>
+
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img class="lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/blob/sitecms/20181227101938/slider-main.jpg" alt="slider main" class="img-fluid" />
+<div class="carousel-text">
+<h4><h2>MİLYONLARCA LİRA &Ouml;D&Uuml;L HAVUZU, BİNLERCE LİSANSLI ESPORCU</h2>
+</h4>
+<p>
+<h3>REKABETTE Y&Uuml;KSEL VE &Ouml;D&Uuml;LLERİN SAHİBİ OL</h3>
+</p>
+<a href="https://hesap.zulaoyun.com/kayit/yeni" class="btn zula-btn">
+KAYIT OL
+</a>
+<a href="#download" class="btn zula-btn">
+İNDİR
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<img class="lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/blob/sitecms/20190204150541/ZPLIZULA_WEBSLIDER_V2_BUYUK.jpg" alt="ZPL&#x130;" class="img-fluid" />
+<div class="carousel-text">
+<h4>&nbsp;</h4>
+<p>
+&nbsp;
+</p>
+<a href="#" class="btn zula-btn">
+DETAYLAR
+</a>
+<a class="btn zula-btn">
+BUTTON TEXT
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<img class="lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/blob/sitecms/20181227113438/gladio-slider-2.jpg" alt="gladio slider" class="img-fluid" />
+<div class="carousel-text">
+<h4><h2>MARKETTEKİ Y&Uuml;ZLERCE SİLAHTAN BİRİNİ SE&Ccedil;</h2>
+</h4>
+<p>
+<h3>EN İYİ VURUŞUNU G&Ouml;STER</h3>
+ </p>
+<a href="https://hesap.zulaoyun.com/altin-yukle" class="btn zula-btn">
+ZULA ALTINI Y&Uuml;KLE
+</a>
+<a class="btn zula-btn">
+ZULA ALTINI Y&Uuml;KLE
+</a>
+</div>
+</div>
+<div class="carousel-item">
+<img class="lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/blob/sitecms/20181227101722/kizlar-slider.jpg" alt="kizlar slider" class="img-fluid" />
+<div class="carousel-text">
+<h4>&nbsp;</h4>
+<p>
+<h2>TAKIMINI KUR, MİLYONLARCA LİRALIK &Ouml;D&Uuml;L&Uuml;N SAHİBİ SEN OL</h2>
+</p>
+<a href="https://espor.zulaoyun.com/" class="btn zula-btn">
+ESPOR
+</a>
+<a class="btn zula-btn">
+BUTTON TEXT
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="campaign-pepsi">
+<a href="https://zulaoyun.com/gelistirme/detay?id=125" class="pepsi-link" title=""></a>
+<div class="row">
+<div class="col-md-6">
+<h3>V1.24 G&Uuml;NCELLEMESİ YAYINDA!</h3>
+<p>Zula&#39;da v1.24 g&uuml;ncellemesinde neler değişti merak ediyorsan, hemen tıkla!</p>
+</div>
+<div class="col-md-6">
+<a class="btn zula-btn" href="https://zulaoyun.com/gelistirme/detay?id=125">Devamını Oku</a>
+</div>
+</div>
+<img class="img-fluid lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/paycell_banner_new.png" />
+</div>
+</div>
+</section> <section class="main-content">
+<div class="esports text-center lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/espor-bg.jpg">
+<h1>
+<h3>MİLYONLACA LİRA &Ouml;D&Uuml;L HAVUZU, BİNLERCE LİSANSLI ESPORCU!</h3>
+<span>REKABETTE Y&Uuml;KSEL VE &Ouml;D&Uuml;LLERİN SAHİBİ SEN OL!</span>
+</h1>
+<img class="img-fluid d-block mx-auto lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/espor-logos.png" />
+<a href="https://espor.zulaoyun.com/" class="btn zula-btn" target="_blank">ESPOR</a>
+</div>
+<div class="playzula-container">
+<div class="playzula-now lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/playzula-now-bg.png">
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<span class="h3">BAŞLANGI&Ccedil; HEDİYELERİN OYUNDA SENİ BEKLİYOR...</span>
+<p>Hemen &uuml;ye olun, Zula&#39;ya hızlı bir giriş yapın!</p>
+<a href="https://hesap.zulaoyun.com/kayit/yeni" target="_blank" class="btn zula-btn">ŞİMDİ ZULA OYNA!</a>
+</div>
+<div class="col-md-8">
+<img class="img-fluid lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/mehmetcik-pro.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="load-za-campaigns">
+<div class="row">
+<div class="col-md-6">
+<div class="load-za lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/load-za-bg.png">
+<span class="h3">EN AVANTAJLI PAKETLER BURADA!</span>
+ <p>G&ouml;rmek i&ccedil;in tıklayın!</p>
+<a href="https://hesap.zulaoyun.com/altin-yukle" target="_blank" class="btn zula-btn cta">ZULA ALTINI YÜKLE</a>
+</div>
+</div>
+<div class="col-md-6">
+<div class="campaigns-main lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/campaigns-main-bg.png">
+<img class="img-fluid lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/campaigns-main-text.png" />
+<a href="/kampanyalar" target="_blank" class="btn zula-btn cta">KAMPANYALAR</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<script src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/js/angular.min.js"></script>
+<section class="lists">
+<div class="container">
+<div ng-app="myApp" ng-controller="myCtrl" class="row">
+<div class="col-md-4">
+<span class="title individual">Bireysel Sıralama <span class="icon-user"></span></span>
+<div class="table-responsive">
+<table class="table">
+<tbody>
+<tr ng-repeat="x in myData | limitTo : 10">
+<td>{{ x.Rank }}</td>
+<td>{{ x.Name }}</td>
+<td>{{ x.Point }}</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div> 
+<div class="col-md-4">
+<span class="title clan">Klan Sıralaması</span>
+<div class="table-responsive">
+<table class="table">
+<tbody>
+<tr ng-repeat="klan in clanData | limitTo : 10">
+<td>{{klan.Rank}}</td>
+<td>{{klan.Name}}</td>
+<td>{{klan.Point}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="col-md-4">
+<span class="title competitive">Rekabetçi Sıralaması</span>
+<div class="table-responsive">
+<table class="table">
+<tbody>
+<tr ng-repeat="competitive in competitiveData | limitTo : 10">
+<td>{{competitive.EloRank}}</td>
+<td>{{competitive.Nickname}}</td>
+<td>{{competitive.EloLevel}}</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope, $http) {
+        $http.get("//cdn.zulaoyun.com/sitecdn/TR/blob/json/individual-ranks.json?_=1468620568877")
+            .then(function (response) {
+
+                $scope.myData = response.data.data;
+            });
+        $http.get("//cdn.zulaoyun.com/sitecdn/TR/blob/json/clan-ranks.json?_=1468620621187").then(function (response1) {
+            $scope.clanData = response1.data.data;
+        });
+
+        $http.get("//cdn.zulaoyun.com/sitecdn/TR/blob/json/elo-ranks.json?_=1468620568877").then(function (response2) {
+            $scope.competitiveData = response2.data.data;
+        });
+
+    });
+</script>
+<section class="footer-content">
+<div class="container become-partner-container">
+<div class="row">
+<div class="col-md-6">
+<div class="partner-box">
+<iframe class="youtube-video" width="100%" height="350" src="https://www.youtube.com/embed/3TGLFHwF_Hg?rel=0?version=3&autoplay=0&controls=0&&showinfo=0&loop=1" frameborder="0" allowfullscreen=""></iframe>
+</div>
+</div>
+<div class="col-md-6">
+<div class="become-partner-zula partner-box">
+<img class="img-fluid lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/become-partner-bg.png" />
+<h1>Zula'ya Ortak Ol!</h1>
+<p>Zula&rsquo;ya yeni &uuml;yeler kazandırırken, bu &uuml;yelerin Zula&rsquo;ya yaptığı &ouml;demelerden sen de kazanmak ister misin?</p>
+<a href="#" onclick="return false;" class="btn zula-btn cta">ÇOK YAKINDA</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="footer-social">
+<div class="container">
+<div class="row">
+<div class="col-md-9 mx-auto">
+<div class="row">
+<div class="col-md-3">
+<a href="https://www.facebook.com/zulaturkiye/" target="_blank" title="Zula Facebook"><img class="img-fluid lazy" alt="Zula Facebook" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/zula-fb.png" /></a>
+</div>
+<div class="col-md-3">
+<a href="https://twitter.com/zulaturkiye" target="_blank" title="Zula Twitter"><img class="img-fluid lazy" alt="Zula Twitter" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/zula-tw.png" /></a>
+</div>
+<div class="col-md-3">
+<a href="https://www.instagram.com/zulaoyun/" target="_blank" title="Zula Instagram"><img class="img-fluid lazy" alt="Zula Instagram" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/zula-ins.png" /></a>
+</div>
+<div class="col-md-3">
+<a href="https://www.youtube.com/user/ZulaTurkiye" target="_blank" title="Zula Youtube"><img class="img-fluid lazy" alt="Zula Youtube" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/zula-yt.png" /></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<ul>
+<li class="first">BA&#x15E;LA</li>
+<li><a href="/kayit-rehberi">Kay&#x131;t Rehberi</a></li>
+<li><a href="/oyuncu-rehberi">Oyuncu Rehberi</a></li>
+<li><a href="/sistem-gereksinimleri">Sistem Gereksinimleri</a></li>
+<li><a href="/davranis-kurallari">Davran&#x131;&#x15F; Kurallar&#x131;</a></li>
+<li><a href="/kullanici-sozlesmesi">Kullan&#x131;c&#x131; S&#xF6;zle&#x15F;mesi</a></li>
+<li><a href="/kisisel-verilerin-korunmasi-kanunu">Ki&#x15F;isel Verilerin Korunmas&#x131; Kanunu</a></li>
+<li><a href="/cerez-politikasi">&#xC7;erez Politikas&#x131;</a></li>
+</ul>
+<ul>
+<li class="first">HABERLER</li>
+<li><a href="/kampanyalar">Kampanyalar</a></li>
+<li><a href="/gelistirmeler">Geli&#x15F;tirme</a></li>
+<li><a href="/etkinlikler">Etkinlikler</a></li>
+</ul>
+<ul>
+<li class="first">ESPOR</li>
+<li><a href="/klan-siralama">Klan S&#x131;ralamas&#x131;</a></li>
+<li><a href="/bireysel-siralama">Bireysel S&#x131;ralama</a></li>
+<li><a href="/rekabet-siralama">Rekabet Modu S&#x131;ralamas&#x131;</a></li>
+</ul>
+<ul>
+<li class="first">MEDYA</li>
+<li><a href="/karakterler">Karakterler</a></li>
+<li><a href="/silahlar">Silahlar</a></li>
+<li><a href="/haritalar">Haritalar</a></li>
+<li><a href="/videolar">Videolar</a></li>
+</ul>
+<ul>
+<li class="first">DESTEK</li>
+<li><a href="/destek">Yard&#x131;m Al&#x131;n</a></li>
+</ul>
+<ul>
+<li class="first">ALTIN Y&#xDC;KLE</li>
+<li><a href="https://hesap.zulaoyun.com/pin/epin">EPIN Y&#xFC;kle</a></li>
+<li><a href="https://hesap.zulaoyun.com/altin-yukle">ZA Y&#xFC;kle</a></li>
+</ul>
+<ul>
+<li class="first">HESABIM</li>
+<li><a href="https://hesap.zulaoyun.com">Hesap &#x130;&#x15F;lemleri</a></li>
+</ul>
+</footer>
+<section class="container-fluid footer-logos">
+<div class="row">
+<div class="col-md-3">
+<div class="img-wrapper first">
+<a href="http://lokumgames.com/" target="_blank" title="Lokum Games">
+<img class="img-fluid lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/lokum-logo.png" />
+</a>
+</div>
+</div>
+<div class="col-md-4 ml-md-auto">
+<div class="img-wrapper last text-right">
+<a href="http://madbytegames.com" target="_blank" title="MadByte Games">
+<img class="img-fluid lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/madbyte.jpg" />
+</a>
+</div>
+</div>
+</div>
+</section>
+<div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="downloadModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<div class="download-header">
+<div class="row">
+<div class="col-md-4">
+<a href="http://hesap.zulaoyun.com/kayit/yeni" target="_blank"><img class="img-fluid lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/download-register.png" /></a>
+</div>
+<div class="col-md-4">
+<a href="http://cdn.zulaoyun.com/misc/zulasetup.exe?t=111ba4b0-5dc2-4fb2-ad15-f8ab11ae67fa" target="_blank"><img class="img-fluid lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/download-download.png" /></a>
+</div>
+<div class="col-md-4">
+<a href="http://cdn.zulaoyun.com/misc/zula_full_setup.exe" target="_blank">
+<img class="img-fluid lazy" data-src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/images/download-download2.png" />
+</a>
+</div>
+</div>
+</div>
+<div class="download-content table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th></th>
+<th>MİNİMUM SİSTEM GEREKSİNİMLERİ</th>
+<th>&Ouml;NERİLEN SİSTEM GEREKSİNİMLERİ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>İŞLETİM SİSTEMİ</td>
+<td>Windows 7 / 8 / 10</td>
+<td>Windows 7 / 8 / 10</td>
+</tr>
+<tr>
+<td>CPU</td>
+<td>Pentium 4 2.4 GHz / Athlon XP 2500+</td>
+<td>Pentium 4 3.0 GHz / Athlon XP 3000+</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>2 GB</td>
+<td>En az 4 GB</td>
+</tr>
+<tr>
+<td>EKRAN KARTI</td>
+<td>Graphics Intel HD</td>
+<td>Graphics Intel HD 4000</td>
+</tr>
+<tr>
+<td>SABİT DİSK</td>
+<td>1 GB</td>
+<td>En az 2 GB</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="//cdn.zulaoyun.com/sitecdn/TR/Content/zulaoyun/js/site.min.js"></script>
+</body>
+</html>
